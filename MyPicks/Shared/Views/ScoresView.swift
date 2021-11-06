@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ScoresView: View {
+    @StateObject private var scoresViewModel = ScoresViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(scoresViewModel.games) {
+                Text($0.name)
+            }
+            .navigationTitle("Scores")
+        }
+        .onAppear {
+            scoresViewModel.fetchScores()
+        }
     }
 }
 
