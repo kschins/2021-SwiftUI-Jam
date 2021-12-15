@@ -40,6 +40,24 @@ struct NFLEvent: Decodable, Identifiable {
     let date: String
     let name: String
     let competitions: [NFLCompetition]
+    let weather: NFLWeather?
+    let status: NFLGameStatus
+    
+    var homeTeam: NFLCompetitor {
+        competitions[0].competitors[0]
+    }
+    
+    var awayTeam: NFLCompetitor {
+        competitions[0].competitors[1]
+    }
+    
+    var odds: NFLSpread? {
+        if let odds = competitions[0].odds, odds.count > 0 {
+            return odds[0]
+        }
+        
+        return nil
+    }
 }
 
 struct NFLCompetition: Decodable, Identifiable {
@@ -52,13 +70,46 @@ struct NFLCompetition: Decodable, Identifiable {
     let conferenceCompetition: Bool
     let venue: NFLVenue
     let competitors: [NFLCompetitor]
-    let score: String?
-    //let linescores: []
+    let status: NFLGameStatus
+    let weather: NFLWeather?
+    //let broadcasts
+    //let leaders
+    let odds: [NFLSpread]?
+}
+
+struct NFLSpread: Decodable {
+    let provider: NFLSpreadProvider
+    let details: String
+    let overUnder: Double
+}
+
+struct NFLWeather: Decodable {
+    let displayValue: String
+    let highTemperature: Int
+    let conditionId: String
+}
+
+struct NFLSpreadProvider: Decodable {
+    let id: String
+    let name: String
+    let priority: Int
 }
 
 struct NFLGameStatus: Decodable {
     let clock: Double
     let displayClock: String
+    let period: Int
+    let type: NFLGameStatusType // ??? weird name
+}
+
+struct NFLGameStatusType: Decodable {
+    let id: String
+    let name: String
+    let state: String
+    let completed: Bool
+    let description: String
+    let detail: String
+    let shortDetail: String
 }
 
 struct NFLVenue: Decodable, Identifiable {
@@ -74,6 +125,8 @@ struct NFLCompetitor: Decodable, Identifiable {
     let uid: String
     let homeAway: String
     let winner: Bool?
+    let score: String?
+    let team: NFLTeam
 }
 
 struct NFLAddress: Decodable {

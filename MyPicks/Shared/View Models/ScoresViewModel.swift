@@ -7,6 +7,16 @@
 
 import Foundation
 
+// Need this for the view, so we can parse the response and transform the response
+// into something we can show on screen with the relevant information so the view
+// does have to do any processing and logic
+struct NFLGame {
+    let homeTeam: String
+    let homeTeamScore: String
+    let awayTeam: String
+    let awayTeamScore: String
+}
+
 class ScoresViewModel: ObservableObject {
     @Published var games: [NFLEvent] = []
 

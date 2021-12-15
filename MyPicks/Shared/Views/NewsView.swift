@@ -36,6 +36,7 @@ struct NewsRow: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.subheadline)
         }
+        .padding(.vertical, 10)
     }
 }
 

@@ -33,6 +33,12 @@
 		1FE8FF5B2735900A00F30345 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF592735900A00F30345 /* NewsResponse.swift */; };
 		1FE8FF5E2736195300F30345 /* ScoresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF5D2736195300F30345 /* ScoresResponse.swift */; };
 		1FE8FF5F2736195300F30345 /* ScoresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF5D2736195300F30345 /* ScoresResponse.swift */; };
+		1FE8FF612736C97400F30345 /* MyBetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF602736C97400F30345 /* MyBetsView.swift */; };
+		1FE8FF622736C97400F30345 /* MyBetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF602736C97400F30345 /* MyBetsView.swift */; };
+		1FE8FF642736C98500F30345 /* NewBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF632736C98500F30345 /* NewBetView.swift */; };
+		1FE8FF652736C98500F30345 /* NewBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF632736C98500F30345 /* NewBetView.swift */; };
+		1FE8FF672736CFE600F30345 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF662736CFE600F30345 /* GameViewModel.swift */; };
+		1FE8FF682736CFE600F30345 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8FF662736CFE600F30345 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,9 @@
 		1FE8FF5427358E2C00F30345 /* ScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresView.swift; sourceTree = "<group>"; };
 		1FE8FF592735900A00F30345 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		1FE8FF5D2736195300F30345 /* ScoresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresResponse.swift; sourceTree = "<group>"; };
+		1FE8FF602736C97400F30345 /* MyBetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBetsView.swift; sourceTree = "<group>"; };
+		1FE8FF632736C98500F30345 /* NewBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBetView.swift; path = ../../../../../../Documents/NewBetView.swift; sourceTree = "<group>"; };
+		1FE8FF662736CFE600F30345 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +134,8 @@
 		1FE8FF432735805700F30345 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FE8FF602736C97400F30345 /* MyBetsView.swift */,
+				1FE8FF632736C98500F30345 /* NewBetView.swift */,
 				1FE8FF5127358E2500F30345 /* NewsView.swift */,
 				1FE8FF5427358E2C00F30345 /* ScoresView.swift */,
 			);
@@ -137,6 +148,7 @@
 				1FE8FF4827358D5400F30345 /* NewsViewModel.swift */,
 				1FE8FF4B27358D5B00F30345 /* ScoresViewModel.swift */,
 				1FE8FF4E27358D6700F30345 /* TeamsViewModel.swift */,
+				1FE8FF662736CFE600F30345 /* GameViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -267,6 +279,7 @@
 				1FE8FF46273580C700F30345 /* Network.swift in Sources */,
 				1FE8FF4927358D5400F30345 /* NewsViewModel.swift in Sources */,
 				1FE8FF4C27358D5B00F30345 /* ScoresViewModel.swift in Sources */,
+				1FE8FF672736CFE600F30345 /* GameViewModel.swift in Sources */,
 				1FE8FF5527358E2C00F30345 /* ScoresView.swift in Sources */,
 				1FE8FF5227358E2500F30345 /* NewsView.swift in Sources */,
 				1FE8FF5E2736195300F30345 /* ScoresResponse.swift in Sources */,
@@ -274,6 +287,8 @@
 				1FE8FF3627357EE300F30345 /* Persistence.swift in Sources */,
 				1FE8FF4F27358D6700F30345 /* TeamsViewModel.swift in Sources */,
 				1FE8FF5A2735900A00F30345 /* NewsResponse.swift in Sources */,
+				1FE8FF612736C97400F30345 /* MyBetsView.swift in Sources */,
+				1FE8FF642736C98500F30345 /* NewBetView.swift in Sources */,
 				1FE8FF3027357EE300F30345 /* MyPicks.xcdatamodeld in Sources */,
 				1FE8FF3427357EE300F30345 /* ContentView.swift in Sources */,
 			);
@@ -286,6 +301,7 @@
 				1FE8FF47273580C700F30345 /* Network.swift in Sources */,
 				1FE8FF4A27358D5400F30345 /* NewsViewModel.swift in Sources */,
 				1FE8FF4D27358D5B00F30345 /* ScoresViewModel.swift in Sources */,
+				1FE8FF682736CFE600F30345 /* GameViewModel.swift in Sources */,
 				1FE8FF5627358E2C00F30345 /* ScoresView.swift in Sources */,
 				1FE8FF5327358E2500F30345 /* NewsView.swift in Sources */,
 				1FE8FF5F2736195300F30345 /* ScoresResponse.swift in Sources */,
@@ -293,6 +309,8 @@
 				1FE8FF3727357EE300F30345 /* Persistence.swift in Sources */,
 				1FE8FF5027358D6700F30345 /* TeamsViewModel.swift in Sources */,
 				1FE8FF5B2735900A00F30345 /* NewsResponse.swift in Sources */,
+				1FE8FF622736C97400F30345 /* MyBetsView.swift in Sources */,
+				1FE8FF652736C98500F30345 /* NewBetView.swift in Sources */,
 				1FE8FF3127357EE300F30345 /* MyPicks.xcdatamodeld in Sources */,
 				1FE8FF3527357EE300F30345 /* ContentView.swift in Sources */,
 			);
